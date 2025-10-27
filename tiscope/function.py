@@ -166,7 +166,7 @@ def TISCOPE_integration(
     # Extract features and adjacency matrix
     n = adata.shape[0]
     A = adata.obsp["spatial_connectivities"].copy()
-    features = adata.X.A.copy()
+    features = adata.X.toarray().copy()
 
     # Step 2: Compute neighborhood gene expression profiles
     print("Computing neighborhood molecular profiles...")
@@ -320,7 +320,7 @@ def TISCOPE_integration(
         for s in slices:
             slice_data = adata[adata.obs[slice_name] == s]
             edge_index = torch.tensor(slice_data.obsp["spatial_connectivities"].nonzero(), dtype=torch.long)
-            x = torch.tensor(slice_data.X.A, dtype=torch.float)
+            x = torch.tensor(slice_data.X.toarray(), dtype=torch.float)
             y = torch.tensor(le.transform(slice_data.obs[slice_name])).long()
 
             with torch.no_grad():
@@ -484,7 +484,7 @@ def TISCOPE_projection(
     # Feature extraction and graph construction
     n = adata.shape[0]
     A = adata.obsp["spatial_connectivities"].copy()
-    features = adata.X.A.copy()
+    features = adata.X.toarray().copy()
 
     # Neighborhood feature computation
     neighbor_avg = compute_neighbor_average(adata, A)
@@ -556,7 +556,7 @@ def TISCOPE_projection(
         for s in slices:
             slice_data = adata[adata.obs[slice_name] == s]
             edge_index = torch.tensor(slice_data.obsp["spatial_connectivities"].nonzero(), dtype=torch.long)
-            x = torch.tensor(slice_data.X.A, dtype=torch.float)
+            x = torch.tensor(slice_data.X.toarray(), dtype=torch.float)
 
             with torch.no_grad():
                 z, _ = model.encoder(x.to(device), edge_index.to(device))
