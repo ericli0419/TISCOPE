@@ -174,7 +174,7 @@ def TISCOPE_integration(
 
     # Create environmental features from neighborhood expression
     df_env = pd.DataFrame(neighbor_avg / n_neighbors, index=adata.obs.index, columns=adata.var.index)
-    env_feat = torch.tensor(np.nan_to_num(df_env.values.astype("float32")), dtype=torch.float)
+    # env_feat = torch.tensor(np.nan_to_num(df_env.values.astype("float32")), dtype=torch.float)
 
     # Step 3: Construct KNN graph for biological neighborhood
     print("Constructing microenvironment similarity neighborhood graph...")
@@ -491,7 +491,7 @@ def TISCOPE_projection(
 
     # Create environmental features from neighborhood expression
     df_env = pd.DataFrame(neighbor_avg / n_neighbors, index=adata.obs.index, columns=adata.var.index)
-    env_feat = torch.tensor(np.nan_to_num(df_env.values.astype("float32")), dtype=torch.float)
+    # env_feat = torch.tensor(np.nan_to_num(df_env.values.astype("float32")), dtype=torch.float)
 
     # KNN graph construction
     if df_env.shape[1] < 31:
