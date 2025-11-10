@@ -1,4 +1,4 @@
-[![Stars](https://img.shields.io/github/stars/ericli0419/TISCOPE?logo=GitHub&color=yellow)](https://github.com/ericli0419/TISCOPE/stargazers)
+[![Stars](https://img.shields.io/github/stars/ericli0419/TISCOPE?logo=GitHub&color=yellow)](https://github.com/ericli0419/TISCOPE/stargazers) [![PyPI](https://img.shields.io/pypi/v/tiscope.svg)](https://pypi.org/project/tiscope)
 <!-- [![PyPI](https://img.shields.io/pypi/v/scalex.svg)](https://pypi.org/project/scalex) -->
 <!-- [![Documentation Status](https://readthedocs.org/projects/scalex/badge/?version=latest)](https://scalex.readthedocs.io/en/latest/?badge=stable) -->
 <!-- [![Downloads](https://pepy.tech/badge/scalex)](https://pepy.tech/project/scalex) -->
