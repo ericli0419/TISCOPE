@@ -14,6 +14,10 @@
 
 <!-- ## [Documentation](https://scalex.readthedocs.io/en/latest/index.html)  -->
 <!-- ## [Tutorial](https://scalex.readthedocs.io/en/latest/tutorial/index.html)  -->
+
+| :warning: We have updated TISCOPE and migted TISCOPE to a new repository. <br> Please refer to [zhangqf-lab/TISCOPE](https://github.com/zhangqf-lab/TISCOPE) for the most up to date version. |
+| ------------------------------------------------------------ |
+
 ## Installation  	
 
 1. We recommend creating a virtual environment using Python 3.11:
@@ -49,7 +53,7 @@ pip install -e .
 
 Please refer to the [Documentation]() and [Tutorial]()
 
-    
+
 ## Release notes
 
 See the [changelog](https://github.com/ericli0419/TISCOPE/CHANGELOG.md).  
@@ -58,4 +62,4 @@ See the [changelog](https://github.com/ericli0419/TISCOPE/CHANGELOG.md).
 ## Citation
 
 
-    
+​    
